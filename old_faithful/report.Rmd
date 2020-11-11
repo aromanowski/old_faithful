@@ -58,7 +58,6 @@ library(Rmixmod)
 # mixmodCluster fits a Gaussian mixture model
 # nbCluster is the number of mixture components. 
 mod1 <- mixmodCluster(faithful, nbCluster=1, criterion="ICL")
-
 mod2 <- mixmodCluster(faithful, nbCluster=2, criterion="ICL")
 
 ```
@@ -73,19 +72,19 @@ summary(mod2)
 **TODO**: Add a sentence giving the ICL of the 1-component GMM for comparison. 
 
 The model with 2 components has an ICL value of `r mod2@bestResult@criterionValue`. 
-The model with 1 component has...
+The model with 1 component has `r mod1@bestResult@criterionValue`.
 
-The best performing model has ... components. 
+The best performing model has 2 components. 
 
 A plot of the optimal clustering is shown below. 
 
 **TODO**: plot the best performing model. 
 
 ```{r}
-# plot()
+plot(mod2)
 ```
 
 # Conclusion
 
-**TODO**: Write a brief conclusion. 
+Our hypothesis has been proven correct. 
 
